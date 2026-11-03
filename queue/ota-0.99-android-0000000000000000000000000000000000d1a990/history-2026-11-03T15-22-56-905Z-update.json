@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "kind": "update",
+  "line": "0.99",
+  "platform": "android",
+  "runtimeVersion": "0000000000000000000000000000000000d1a990",
+  "createdAt": "2026-11-03T15:22:56.905Z",
+  "body": "{\"id\":\"f39eff5a-360c-43c3-8306-10148fb85fc0\",\"createdAt\":\"2026-11-03T15:22:56.905Z\",\"runtimeVersion\":\"0000000000000000000000000000000000d1a990\",\"launchAsset\":{\"hash\":\"R5YitnFG9Mlj4IJdUxYOiQip7swFOkLO9fcRrx1hE9w\",\"key\":\"63796080f5930e98244be292e9a245df\",\"contentType\":\"application/javascript\",\"fileExtension\":\".bundle\",\"url\":\"https://getrelo.app/ota/assets/ota-0.99-android-0000000000000000000000000000000000d1a990/479622b67146f4c963e0825d53160e8908a9eecc053a42cef5f711af1d6113dc.hbc\"},\"assets\":[],\"metadata\":{},\"extra\":{\"displayVersion\":\"0.99.0.2\"}}",
+  "signature": "sig=\"AV3dcdo5OVWSOFT+OcYt5FY3V6aYiAhfiz3p/9o7dryV+MdNyLorQFTUWmlsswPMAYxfNMRaqplqEBimjzCd3c/qgWpcXnl5dncYogTCY068H2+x9dsV6JdyBT74CspxkYwYsy7Q5yj4ywlc/ISEXfVsgnC0aw+a5grZNbCU/XEdCKDff9Kk0EdvzpQCoyPiZxeHosnFDbaw5pvaNhZ/bA249/3pxb/gEkGg1JK90Nq+z96heO3+UaQYdw8r++y3YPzh1T5Y4mxIlAKiCuHC0iEbg5o5wjZUSstR/vjErrPkXFI+xv3p4VMFeTTnjHgjgDnmIgTrmG7xHF2R0COLEg==\", keyid=\"main\""
+}
