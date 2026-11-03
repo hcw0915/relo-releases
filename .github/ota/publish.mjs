@@ -30,6 +30,12 @@ for (const [tag, list] of Object.entries(byTag)) {
     console.log(`verified ${f} (${r.kind}${r.kind === 'update' ? ' ' + JSON.parse(r.body).id : ''})`)
   }
   for (const { f, name } of list.filter((x) => x.name !== 'current.json')) gh('release', 'upload', tag, f, '--clobber')
-  for (const { f } of list.filter((x) => x.name === 'current.json')) gh('release', 'upload', tag, f, '--clobber')
+  for (const { f } of list.filter((x) => x.name === 'current.json')) {
+    // never move current.json backwards (e.g. a revert commit re-touching an older record)
+    const live = await fetch(`https://github.com/${process.env.GH_REPO}/releases/download/${tag}/current.json?t=${Date.now()}`).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+    const next = JSON.parse(fs.readFileSync(f, 'utf8'))
+    if (live && String(next.createdAt) <= String(live.createdAt)) { console.log(`skip ${f}: not newer than the live current.json (${live.createdAt})`); continue }
+    gh('release', 'upload', tag, f, '--clobber')
+  }
   console.log(`published ${tag}`)
 }
